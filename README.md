@@ -15,9 +15,6 @@ This project is a standalone, fully functional web application designed to demon
     * The displayed numerical value is updated in real-time.
     * The color of the count dynamically changes (e.g., Neon Green for positive, Neon Red for negative, Neutral for zero) to provide immediate visual feedback.
 
-* **3. Design Aesthetic (Dark Mode):**
-    * The UI features a clean, high-impact **Dark Mode** design using deep background colors and vibrant **Neon Accents** for a modern, high-tech look.
-
 * **4. Full Responsiveness:**
     * The layout is built using **CSS Flexbox** to ensure the counter is perfectly centered on the screen.
     * Buttons stack vertically on smaller mobile devices to maintain excellent usability and readability.
