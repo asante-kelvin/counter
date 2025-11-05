@@ -1,0 +1,136 @@
+/* --- Global Reset and Modern Base UI --- */
+:root {
+    --primary-color: #3b82f6; /* Modern Blue */
+    --secondary-color: #2563eb; /* Darker Blue */
+    --bg-color: #f0f4f8; /* Light gray background */
+    --surface-color: #ffffff; /* White card surface */
+    --text-color: #1f2937; /* Dark text */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    /* Full screen centering for the app container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- Main App Container (Centered and Styled) --- */
+.responsive-app-container {
+    width: 90%;
+    max-width: 600px; /* Limits width on large screens */
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center; /* Centers block content inside the container */
+}
+
+/* --- Heading Styling --- */
+h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    padding-left: 0; /* REMOVED fixed padding */
+}
+
+/* --- Display Value Styling --- */
+.container {
+    /* Uses Flexbox for internal centering if needed, but text-align on parent works here */
+    padding: 50px 20px; /* Reduced padding */
+    margin: 20px 0; /* Centered margins */
+    font-size: 5rem; /* Larger font for the count */
+    font-weight: 700;
+    color: var(--text-color);
+    border-radius: 8px;
+    background-color: var(--f0f4f8);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+.count {
+    font-size: 1em; /* Relative to parent container font-size */
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Button Group Container --- */
+.sub-container {
+    display: flex; /* Arranges buttons horizontally */
+    justify-content: center; /* Centers the buttons */
+    gap: 15px; /* Space between buttons */
+    margin-top: 10px; 
+}
+
+/* --- Button Styling --- */
+.btn {
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin: 0; /* REMOVED fixed margin */
+}
+
+/* Custom button styles */
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.secondary-btn {
+    background-color: #e5e7eb;
+    color: var(--text-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+
+.secondary-btn:hover {
+    background-color: #d1d5db;
+}
+
+/* --- Status/Info Text --- */
+#ch {
+    color: #4b5563;
+    font-size: 1rem;
+    margin-top: 25px;
+    padding-left: 0; /* REMOVED fixed padding */
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------- */
+/* --- 📱 RESPONSIVENESS (Mobile Optimization) --- */
+/* ------------------------------------------------------------- */
+
+@media (max-width: 500px) {
+    
+    .responsive-app-container {
+        width: 95%; /* Take up a bit more width on small screens */
+        padding: 20px; /* Reduce padding */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller heading */
+    }
+
+    .container {
+        font-size: 4rem; /* Smaller count display */
+        padding: 40px 10px;
+    }
+    
+    .sub-container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width when stacked */
+        margin-bottom: 10px; /* Add spacing between stacked buttons */
+    }
+}
